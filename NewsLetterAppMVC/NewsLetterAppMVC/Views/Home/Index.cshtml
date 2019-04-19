@@ -4,7 +4,21 @@
             <h5 class="m-0">Sign up to our newsletter</h5>
         </div>
         <div class="card-body">
-
+            @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" required/>
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" required/>
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email" required/>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
         </div>
     </div>
 </div>
