@@ -9,27 +9,27 @@
             {
             <div class="row no-gutters">
                 <div class="form-group col-md-12">
-                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" required />
                 </div>
                 <div class="form-group col-md-12">
-                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" required />
                 </div>
                 <div class="form-group col-md-12">
-                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address"/>
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" required />
                 </div>
                 <div class="form-group col-md-12">
                     <p>Please enter your date of birth with the format MMDDYYYY (no dashes or spaces)</p>
-                    <input name="DateOfBirth" type="number" class="form-control" placeholder="MMDDYYYY"/>
+                    <input name="DateOfBirth" type="number" class="form-control" placeholder="MMDDYYYY" required />
                 </div>
                 <div class="form-group col-md-12">
                     <p>Please enter the year of your vehicle in the format YYYY</p>
-                    <input name="CarYear" type="number" class="form-control" placeholder="YYYY"/>
+                    <input name="CarYear" type="number" class="form-control" placeholder="YYYY" required />
                 </div>
                 <div class="form-group col-md-12">
-                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make ex: Jeep"/>
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make ex: Jeep" required />
                 </div>
                 <div class="form-group col-md-12">
-                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model ex: Wrangler"/>
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model ex: Wrangler" required />
                 </div>
                 <div class="form-group custom-radio">
                     <p>Have you ever had a DUI?</p>
@@ -37,12 +37,12 @@
                         <label class="radio-inline"><input name="Dui" type="radio" value="true" />Yes</label>
                     </div>
                     <div class="radio">
-                        <label class="radio-inline"><input name="Dui" type="radio" value="false"  />No</label>
+                        <label class="radio-inline"><input name="Dui" type="radio" value="false" checked="checked" />No</label>
                     </div>
                 </div>
                 <div class="form-group col-md-12">
                     <p>How many speeding tickets do you have?</p>
-                    <input name="SpeedingTickets" type="number" class="form-control" />
+                    <input name="SpeedingTickets" type="number" class="form-control" required />
                 </div>
                 <div class="form-group custom-radio">
                     <p>Do you wish to recieve full coverage?</p>
@@ -50,7 +50,7 @@
                         <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="true" />Yes</label>
                     </div>
                     <div class="radio">
-                        <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="false"  />No</label>
+                        <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="false" checked="checked"  />No</label>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-block btn-primary">Submit</button>

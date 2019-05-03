@@ -12,11 +12,14 @@ namespace CarInsuranceMVC.Controllers
         {
             return View();
         }
-
-        public ActionResult Apply(string FirstName, string LastName, string EmailAddress, int DateOfBirth, int CarYear, string CarMake, string CarModel, bool Dui, int SpeedingTickets, bool CoverageOrLiability)
+        [HttpPost]
+        public ActionResult Apply(string firstName, string lastName, string emailAddress, int dateOfBirth, int carYear, string carMake, string carModel, bool dui, int speedingTickets, bool coverageOrLiability)
         {
-            return null;
+            
+            return View("Quote");
+                        
         }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
