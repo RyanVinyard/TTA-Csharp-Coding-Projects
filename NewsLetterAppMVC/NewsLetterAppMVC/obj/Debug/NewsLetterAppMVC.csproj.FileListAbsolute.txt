@@ -184,3 +184,7 @@ C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Project
 C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.SqlServer.dll
 C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.xml
 C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.dll
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.xml
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\NewsLetterAppMVC\NewsLetterAppMVC\bin\EntityFramework.SqlServer.xml
