@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarInsuranceMVC.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,12 +13,33 @@ namespace CarInsuranceMVC.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Apply(string firstName, string lastName, string emailAddress, int dateOfBirth, int carYear, string carMake, string carModel, bool dui, int speedingTickets, bool coverageOrLiability)
         {
             
+            string queryString = 
             return View("Quote");
                         
+        }
+
+        public ActionResult Admin()
+        {
+            using (InsuranceEntities db = new InsuranceEntities())
+            {
+                var quotes = db.Quotes;
+                var quoteVMs = new List<QuoteVM>();
+                foreach (var quote in quotes)
+                {
+                    var quoteVM = new QuoteVM();
+                    quoteVM.FirstName = quote.FirstName;
+                    quoteVM.LastName = quote.LastName;
+                    quoteVM.EmailAddress = quote.EmailAddress;
+                    quoteVMs.Add(quoteVM);
+                }
+
+                return View(quoteVMs);
+            }
         }
 
         public ActionResult About()
