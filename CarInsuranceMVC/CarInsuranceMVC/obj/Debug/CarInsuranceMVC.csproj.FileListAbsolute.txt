@@ -78,3 +78,7 @@ C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Project
 C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.csproj.CopyComplete
 C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.dll
 C:\Users\ravry\source\repos\TTA-Csharp-Coding-Projects\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.pdb
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.csprojAssemblyReference.cache
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.dll
+C:\Users\Ryan\Documents\GitHub\TTA-Csharp-Coding-Projects\CarInsuranceMVC\CarInsuranceMVC\obj\Debug\CarInsuranceMVC.pdb

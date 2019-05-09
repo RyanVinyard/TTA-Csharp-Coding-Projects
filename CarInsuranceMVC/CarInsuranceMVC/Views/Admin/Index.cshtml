@@ -9,7 +9,7 @@
         <div class="card-body">
             @foreach (var quote in Model)
             {
-                using (Html.BeginForm("Unsubscribe", "Admin", FormMethod.Post))
+                using (Html.BeginForm("Remove", "Admin", FormMethod.Post))
                 {
                     <input type="hidden" name="Id" value="@quote.Id" />
                     <div class="row mb-3">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="col">
                             <button type="submit" class="btn btn-danger btn-block">
-                                Unsubscribe
+                                Remove
                             </button>
                         </div>
                     </div>
