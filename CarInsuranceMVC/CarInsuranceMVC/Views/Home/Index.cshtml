@@ -57,65 +57,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-block btn-primary">Submit</button>
-                    @{ 
-                        if (IsPost)
-                        {
-                            int dateOfBirth = Convert.ToInt32(Request.Form["DateOfBirth"]);
-                            int carYear = Convert.ToInt32(Request.Form["CarYear"]);
-                            string carMake = Request.Form["CarMake"];
-                            string carModel = Request.Form["CarModel"];
-                            string dui = Request.Form["Dui"];
-                            int speedingTickets = Convert.ToInt32(Request.Form["SpeedingTickets"]);
-                            string coverageOrLiability = Request.Form["CoverageOrLiability"];
-
-
-                            int total = 0;
-                            if (dateOfBirth > 05092001)
-                            {
-                                total = total + 100;
-                            }
-
-                            else if (dateOfBirth > 05091994)
-                            {
-                                total = total + 25;
-                            }
-
-                            if (dateOfBirth < 05091919)
-                            {
-                                total = total + 25;
-                            }
-
-                            if (carYear > 2015)
-                            {
-                                total = total + 25;
-                            }
-
-                            if (carMake == "Porsche" && carModel == "911 Carrera")
-                            {
-                                total = total + 50;
-                            }
-
-                            if (carMake == "Porsche")
-                            {
-                                total = total + 25;
-                            }
-
-                            total = (total * (speedingTickets * 10));
-
-                            if (dui == "true")
-                            {
-                                total = Convert.ToInt16(total * 1.25);
-                            }
-
-                            if (coverageOrLiability == "true")
-                            {
-                                total = Convert.ToInt16(total * 1.5);
-                            }
-
-                            Request.Form["total"] = Convert.ToString(total);
-
-                        }
-                    }
+                    
                 </div>
                 }
             

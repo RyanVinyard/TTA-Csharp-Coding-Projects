@@ -6,9 +6,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace CarInsuranceMVC.Controllers
 {
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
         public ActionResult Index()
         {
@@ -37,52 +38,59 @@ namespace CarInsuranceMVC.Controllers
                 quote.CoverageOrLiability = coverageOrLiability;
 
 
-                int quoteTotal = 25;
+                
                 if (dateOfBirth > 05092001)
                 {
-                    quoteTotal = quoteTotal + 100;
+                    Total.quoteTotal = Total.quoteTotal + 100;
                 }
 
                 else if (dateOfBirth > 05091994)
                 {
-                    quoteTotal = quoteTotal + 25;
+                    Total.quoteTotal = Total.quoteTotal + 25;
                 }
 
                 if (dateOfBirth < 05091919)
                 {
-                    quoteTotal = quoteTotal + 25;
+                    Total.quoteTotal = Total.quoteTotal + 25;
                 }
 
                 if (carYear > 2015)
                 {
-                    quoteTotal = quoteTotal + 25;
+                    Total.quoteTotal = Total.quoteTotal + 25;
                 }
 
                 if (carMake == "Porsche" && carModel == "911 Carrera")
                 {
-                    quoteTotal = quoteTotal + 50;
+                    Total.quoteTotal = Total.quoteTotal + 50;
                 }
 
                 if (carMake == "Porsche")
                 {
-                    quoteTotal = quoteTotal + 25;
+                    Total.quoteTotal = Total.quoteTotal + 25;
                 }
 
-                quoteTotal = (quoteTotal * (speedingTickets * 10));
+                if (speedingTickets > 0)
+                {
+                    Total.quoteTotal = (Total.quoteTotal * (speedingTickets * 10));
+                }
+                
 
                 if (dui == true)
                 {
-                    quoteTotal = Convert.ToInt16(quoteTotal * 1.25);
+                    Total.quoteTotal = Convert.ToInt16(Total.quoteTotal * 1.25);
                 }
 
                 if (coverageOrLiability == true)
                 {
-                    quoteTotal = Convert.ToInt16(quoteTotal * 1.5);
+                    Total.quoteTotal = Convert.ToInt32(Total.quoteTotal * 1.5);
                 }
-                quote.Total = quoteTotal;
+                quote.Total = Total.quoteTotal;
 
                 db.Quotes.Add(quote);
                 db.SaveChanges();
+                System.Windows.Forms.MessageBox.Show("Your total is: $" + Total.quoteTotal + " per month.");
+                Total.quoteTotal = 25;
+                
             }
 
             return View("Quote");
