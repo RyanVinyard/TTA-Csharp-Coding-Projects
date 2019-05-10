@@ -25,6 +25,7 @@ namespace CarInsuranceMVC.Controllers
                     quoteVM.FirstName = quote.FirstName;
                     quoteVM.LastName = quote.LastName;
                     quoteVM.EmailAddress = quote.EmailAddress;
+                    quoteVM.Total = Convert.ToInt16(quote.Total);
                     quoteVMs.Add(quoteVM);
 
                 }

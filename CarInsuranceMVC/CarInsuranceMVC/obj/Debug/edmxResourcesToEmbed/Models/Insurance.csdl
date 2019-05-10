@@ -16,6 +16,7 @@
     <Property Name="SpeedingTickets" Type="Int32" />
     <Property Name="CoverageOrLiability" Type="Boolean" />
     <Property Name="Removed" Type="DateTime" Precision="3" />
+    <Property Name="Total" Type="Int32" />
   </EntityType>
   <EntityContainer Name="InsuranceEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Quotes" EntityType="Self.Quote" />

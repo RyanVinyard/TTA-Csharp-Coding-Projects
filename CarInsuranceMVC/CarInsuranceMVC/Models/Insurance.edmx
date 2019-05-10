@@ -21,6 +21,7 @@
           <Property Name="SpeedingTickets" Type="int" />
           <Property Name="CoverageOrLiability" Type="bit" />
           <Property Name="Removed" Type="datetime" />
+          <Property Name="Total" Type="int" />
         </EntityType>
         <EntityContainer Name="InsuranceModelStoreContainer">
           <EntitySet Name="Quotes" EntityType="Self.Quotes" Schema="dbo" store:Type="Tables" />
@@ -45,6 +46,7 @@
           <Property Name="SpeedingTickets" Type="Int32" />
           <Property Name="CoverageOrLiability" Type="Boolean" />
           <Property Name="Removed" Type="DateTime" Precision="3" />
+          <Property Name="Total" Type="Int32" />
         </EntityType>
         <EntityContainer Name="InsuranceEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Quotes" EntityType="Self.Quote" />
@@ -58,6 +60,7 @@
           <EntitySetMapping Name="Quotes">
             <EntityTypeMapping TypeName="InsuranceModel.Quote">
               <MappingFragment StoreEntitySet="Quotes">
+                <ScalarProperty Name="Total" ColumnName="Total" />
                 <ScalarProperty Name="Removed" ColumnName="Removed" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />

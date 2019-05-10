@@ -16,6 +16,7 @@
     <Property Name="SpeedingTickets" Type="int" />
     <Property Name="CoverageOrLiability" Type="bit" />
     <Property Name="Removed" Type="datetime" />
+    <Property Name="Total" Type="int" />
   </EntityType>
   <EntityContainer Name="InsuranceModelStoreContainer">
     <EntitySet Name="Quotes" EntityType="Self.Quotes" Schema="dbo" store:Type="Tables" />

@@ -7,55 +7,118 @@
             <h3>Please enter your information to recieve an insurance quote.</h3>
             @using (Html.BeginForm("Apply", "Home", FormMethod.Post))
             {
-            <div class="row no-gutters">
-                <div class="form-group col-md-12">
-                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" required />
-                </div>
-                <div class="form-group col-md-12">
-                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" required />
-                </div>
-                <div class="form-group col-md-12">
-                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" required />
-                </div>
-                <div class="form-group col-md-12">
-                    <p>Please enter your date of birth with the format MMDDYYYY (no dashes or spaces)</p>
-                    <input name="DateOfBirth" type="number" class="form-control" placeholder="MMDDYYYY" required />
-                </div>
-                <div class="form-group col-md-12">
-                    <p>Please enter the year of your vehicle in the format YYYY</p>
-                    <input name="CarYear" type="number" class="form-control" placeholder="YYYY" required />
-                </div>
-                <div class="form-group col-md-12">
-                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make ex: Jeep" required />
-                </div>
-                <div class="form-group col-md-12">
-                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model ex: Wrangler" required />
-                </div>
-                <div class="form-group custom-radio">
-                    <p>Have you ever had a DUI?</p>
-                    <div class="radio">
-                        <label class="radio-inline"><input name="Dui" type="radio" value="true" />Yes</label>
+                <div class="row no-gutters">
+                    <div class="form-group col-md-12">
+                        <input name="FirstName" type="text" class="form-control" placeholder="First Name" required />
                     </div>
-                    <div class="radio">
-                        <label class="radio-inline"><input name="Dui" type="radio" value="false" checked="checked" />No</label>
+                    <div class="form-group col-md-12">
+                        <input name="LastName" type="text" class="form-control" placeholder="Last Name" required />
                     </div>
-                </div>
-                <div class="form-group col-md-12">
-                    <p>How many speeding tickets do you have?</p>
-                    <input name="SpeedingTickets" type="number" class="form-control" required />
-                </div>
-                <div class="form-group custom-radio">
-                    <p>Do you wish to recieve full coverage?</p>
-                    <div class="radio">
-                        <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="true" />Yes</label>
+                    <div class="form-group col-md-12">
+                        <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" required />
                     </div>
-                    <div class="radio">
-                        <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="false" checked="checked"  />No</label>
+                    <div class="form-group col-md-12">
+                        <p>Please enter your date of birth with the format MMDDYYYY (no dashes or spaces)</p>
+                        <input name="DateOfBirth" type="number" class="form-control" placeholder="MMDDYYYY" required />
                     </div>
+                    <div class="form-group col-md-12">
+                        <p>Please enter the year of your vehicle in the format YYYY</p>
+                        <input name="CarYear" type="number" class="form-control" placeholder="YYYY" required />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="CarMake" type="text" class="form-control" placeholder="Car Make ex: Jeep" required />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="CarModel" type="text" class="form-control" placeholder="Car Model ex: Wrangler" required />
+                    </div>
+                    <div class="form-group custom-radio">
+                        <p>Have you ever had a DUI?</p>
+                        <div class="radio">
+                            <label class="radio-inline"><input name="Dui" type="radio" value="true" />Yes</label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio-inline"><input name="Dui" type="radio" value="false" checked="checked" />No</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <p>How many speeding tickets do you have?</p>
+                        <input name="SpeedingTickets" type="number" class="form-control" required />
+                    </div>
+                    <div class="form-group custom-radio">
+                        <p>Do you wish to recieve full coverage?</p>
+                        <div class="radio">
+                            <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="true" />Yes</label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio-inline"><input name="CoverageOrLiability" type="radio" value="false" checked="checked"  />No</label>
+                        </div>
+                        <div class="form-group">
+                            <input hidden name="total" value="0" />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                    @{ 
+                        if (IsPost)
+                        {
+                            int dateOfBirth = Convert.ToInt32(Request.Form["DateOfBirth"]);
+                            int carYear = Convert.ToInt32(Request.Form["CarYear"]);
+                            string carMake = Request.Form["CarMake"];
+                            string carModel = Request.Form["CarModel"];
+                            string dui = Request.Form["Dui"];
+                            int speedingTickets = Convert.ToInt32(Request.Form["SpeedingTickets"]);
+                            string coverageOrLiability = Request.Form["CoverageOrLiability"];
+
+
+                            int total = 0;
+                            if (dateOfBirth > 05092001)
+                            {
+                                total = total + 100;
+                            }
+
+                            else if (dateOfBirth > 05091994)
+                            {
+                                total = total + 25;
+                            }
+
+                            if (dateOfBirth < 05091919)
+                            {
+                                total = total + 25;
+                            }
+
+                            if (carYear > 2015)
+                            {
+                                total = total + 25;
+                            }
+
+                            if (carMake == "Porsche" && carModel == "911 Carrera")
+                            {
+                                total = total + 50;
+                            }
+
+                            if (carMake == "Porsche")
+                            {
+                                total = total + 25;
+                            }
+
+                            total = (total * (speedingTickets * 10));
+
+                            if (dui == "true")
+                            {
+                                total = Convert.ToInt16(total * 1.25);
+                            }
+
+                            if (coverageOrLiability == "true")
+                            {
+                                total = Convert.ToInt16(total * 1.5);
+                            }
+
+                            Request.Form["total"] = Convert.ToString(total);
+
+                        }
+                    }
                 </div>
-                <button type="submit" class="btn btn-block btn-primary">Submit</button>
-            </div>
-            }
+                }
+            
         </div>
     </div>
 </div>

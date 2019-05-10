@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Quotes">
       <EntityTypeMapping TypeName="InsuranceModel.Quote">
         <MappingFragment StoreEntitySet="Quotes">
+          <ScalarProperty Name="Total" ColumnName="Total" />
           <ScalarProperty Name="Removed" ColumnName="Removed" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />

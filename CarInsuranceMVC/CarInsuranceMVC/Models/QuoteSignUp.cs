@@ -18,5 +18,6 @@ namespace CarInsuranceMVC.Models
         public bool Dui { get; set; }
         public int SpeedingTickets { get; set; }
         public bool CoverageOrLiability { get; set; }
+        public int Total { get; set; }
     }
 }

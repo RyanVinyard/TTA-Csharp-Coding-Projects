@@ -26,5 +26,6 @@ namespace CarInsuranceMVC.Models
         public Nullable<int> SpeedingTickets { get; set; }
         public Nullable<bool> CoverageOrLiability { get; set; }
         public Nullable<System.DateTime> Removed { get; set; }
+        public Nullable<int> Total { get; set; }
     }
 }
